@@ -173,7 +173,6 @@ a.closeBtn {
         color: var(--VeryDarkBlue);
         font-weight: 600;
         padding: 1rem;
-        margin: 1rem;
         text-decoration: none;
     }
     .topMenu.responsive .dropdown-content {
@@ -184,6 +183,12 @@ a.closeBtn {
         box-shadow: none;
     }
     .topMenu.responsive .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .topMenu.responsive .dropdown:focus .dropdown-content {
+        display: block;
+    }
+    .topMenu.responsive .dropdown:active .dropdown-content {
         display: block;
     }
     .topMenu.responsive li {
