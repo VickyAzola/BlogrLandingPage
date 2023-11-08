@@ -173,6 +173,7 @@ a.closeBtn {
         color: var(--VeryDarkBlue);
         font-weight: 600;
         padding: 1rem;
+        margin: .5rem;
         text-decoration: none;
     }
     .topMenu.responsive .dropdown-content {
@@ -182,8 +183,17 @@ a.closeBtn {
         color: var(--VeryDarkBlue);
         box-shadow: none;
     }
-    .topMenu.responsive .dropdown:hover, .dropdown:focus, .dropdown:active .dropdown-content {
+    .topMenu.responsive .dropdown:active .dropdown-content {
         display: block;
+        transition: all 0.3s;
+        transition-delay: 300ms;
+    }
+    .topMenu.responsive .delayed {
+        transition: all 0.3s;
+        transition-delay: 300ms;
+    }
+    .topMenu.responsive .delayed:active {
+        transition: none;
     }
     .topMenu.responsive li {
         text-align: center;
