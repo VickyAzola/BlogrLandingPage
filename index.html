@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+
+    <div class="flex">
+      <a class="ml-4 mt-10 h-16 lg:ml-20 xl:ml-28 md:mt-14" href="#"><img class="w-20" src="../images/logo.svg" alt="Blogr Logo" /></a>
+
+      <div class="buttonGroup" id="buttonGroup">
+        <a class="menuBtn md:hidden absolute right-0 pb-6 pt-10 px-5" 
+        href="javascript:void(0);" onclick="showNavMenu()">
+          <img src="../images/icon-hamburger.svg" alt="Menu Icon" />
+        </a>
+        <a class="closeBtn md:hidden absolute right-0 pb-6 pt-10 px-5" 
+        href="javascript:void(0);" onclick="showNavMenu()">
+          <img src="../images/icon-close.svg" alt="Close Menu Icon" />
+        </a>
+      </div>
+    </div>
+
+    <nav class="topMenu" id="topMenu" aria-label="navigation header">
+      <div class="flex flex-col md:flex-row">
+        <div class="dropdown">
+          <button class="dropdownBtn">Product
+            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
+            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
+          </button>
+            <ul class="dropdown-content">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+          <button class="dropdownBtn">Company
+            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
+            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
+          </button>
+          <ul class="dropdown-content">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="dropdownBtn">Connect
+            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
+            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
+          </button>
+          <ul class="dropdown-content">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div> 
+
+      <div class="loginBtn lg:mr-28">
+        <hr class="w-[16rem] block md:hidden">
+        <button class="md:text-white text-[#1F3F5B] p-2 font-semibold my-3 md:my-2 md:mr-4">Login</button>
+        <button class="singUp md:text-[#FF525D] md:bg-white  hover:bg-[#FF7A85] md:hover:text-white py-3 px-10 md:py-2 md:px-8 rounded-full">Sign Up</button>
+      </div>
+      </nav>
+    
+    <section class="text-white text-center grid place-content-center h-[29rem]">
+      <h1 class="text-3xl md:text-5xl md:font-medium mb-4">A modern <br class="md:hidden">publishing platform</h1>
+      <p class="font-light text-lg">Grow your audience and build your online brand</p>
+      <div class="flex items-center justify-center gap-x-3 my-10">
+        <button class="text-[#FF525D] bg-white hover:text-white hover:bg-[#FF7A85] hover:border-[#FF7A85] py-2 px-4 rounded-full border border-white font-bold">Start for Free</button>
+        <button class="py-2 px-6 rounded-full font-bold border hover:text-[#FF525D] hover:bg-white border-white">Learn More</button>
+      </div>
+    </section>
+  </header>
+
+<main class="pb-10 md:pb-0 text-center">
+
+  <section class="pb-52 md:pb-80 lg:pb-46 lg:bg-[url('../images/illustration-editor-desktop.svg')] lg:bg-contain lg:bg-no-repeat lg:bg-[center_right_-20rem] xl:bg-[center_right_-13rem]" style="background-size: 48rem;">
+    <h2 class="text-2xl pt-20 md:pt-10 lg:pt-28 md:text-4xl font-medium text-[#1F3F5B]">Designed for the future</h2>
+    <div class="lg:grid lg:grid-cols-2">
+      <img class="lg:hidden my-10 mx-auto" src="../images/illustration-editor-mobile.svg" alt="">
+      <div class="lg:text-left xl:ml-[7rem] lg:mt-28">
+        <h3 class="text-2xl font-semibold text-[#1F3F5B] mx-12 md:mx-8 mb-4">Introducing an extensible editor</h3>
+        <p class="mb-10 text-[#4B5862] font-light mx-8">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.</p>
+        <h4  class="text-2xl font-semibold text-[#1F3F5B] mx-8 mb-4">Robust content management</h4>
+        <p class="mb-10 text-[#4B5862] font-light mx-8">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-14 relative lg:grid lg:grid-cols-2 bg-[#373954] bg-[url('../images/bg-pattern-circles.svg')] bg-cover bg-no-repeat bg-[center_top_-14rem] lg:bg-[left_-25rem_top_-53rem] text-white text-center rounded-tr-[5rem] rounded-bl-[5rem] pt-[10rem] lg:pt-[8rem] pb-[7rem] lg:pb-[8rem]">
+    <img class="absolute left-0 right-0 mx-auto top-[-30%] md:top-[-63%] lg:top-[-18%] lg:left-[-50%]" src="../images/illustration-phones.svg" alt="">
+    <div class="lg:col-start-2 lg:text-left lg:mr-32">
+      <h2 class="mx-8 text-4xl font-medium mt-20 lg:mt-0">State of the Art Infrastructure</h2>
+      <p class="mx-8 md:mx-16 lg:mx-0 mt-6 text-[#C8C8CB]"> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+      </p>
+    </div>
+  </section>
+
+  <section class="md:mb-20 lg:h-[50rem] lg:grid lg:grid-cols-2 lg:place-content-center lg:bg-[url('../images/illustration-laptop-desktop.svg')] lg:bg-contain lg:bg-no-repeat lg:bg-[center_left_-25rem] xl:bg-[center_left_-16rem]" style="background-size: 55rem;">
+    <img class="lg:hidden mx-auto" src="../images/illustration-laptop-mobile.svg" alt="">
+    <div class="lg:col-start-2 lg:text-left lg:mr-20">
+      <h2 class="text-2xl font-semibold text-[#1F3F5B] mb-4 mt-8">Free, open, simple</h2>
+      <p class="mb-10 text-[#4B5862] font-light mx-8 lg:mx-0">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+      </p>
+      <h3 class="text-2xl font-semibold text-[#1F3F5B] mb-4">Powerful tooling</h3>
+      <p class="mb-10 text-[#4B5862] font-light mx-8 lg:mx-0">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.</p>
+    </div>
+  </section>
+
+</main>
+  
+
+  <footer class="bg-[#25252D] text-white text-center md:text-left md:pt-16 rounded-tr-[5rem] lg:pr-20">
+      
+      <nav class="md:flex md:justify-around py-8" aria-label="navigation footer">
+        <a href="#"><img class="w-24 mx-auto py-10 md:py-0" src="../images/logo.svg" alt="Blogr Logo" /></a>
+        <ul class="mb-6 text-[#C8C8CB] md:space-y-2">
+          <li class="mb-4 md:mb-6 text-white font-semibold">Product</li>
+          <li><a class="hover:underline" href="#">Overview</a></li>
+          <li><a class="hover:underline" href="#">Pricing</a></li>
+          <li><a class="hover:underline" href="#">Marketplace</a></li>
+          <li><a class="hover:underline" href="#">Features</a></li>
+          <li><a class="hover:underline" href="#">Integrations</a></li>
+        </ul>
+        <ul class="mb-6 text-[#C8C8CB] md:space-y-2">
+          <li class="mb-4 md:mb-6 text-white font-semibold">Company</li>
+          <li><a class="hover:underline" href="#">About</a></li>
+          <li><a class="hover:underline" href="#">Team</a></li>
+          <li><a class="hover:underline" href="#">Blog</a></li>
+          <li><a class="hover:underline" href="#">Careers</a></li>
+        </ul>
+        <ul class="mb-12 text-[#C8C8CB] md:space-y-2">
+          <li class="mb-4 md:mb-6 text-white font-semibold">Connect</li>
+          <li><a class="hover:underline" href="#">Contact</a></li>
+          <li><a class="hover:underline" href="#">Newsletter</a></li>
+          <li><a class="hover:underline" href="#">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+    <p class="text-xs text-[#b5b5b5] md:ml-6 pb-3">Challenge by <a class="font-bold hover:text-white" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="font-bold hover:text-white" href="#" target="_blank">Victoria Azola</a>.</p>
+  </footer>
+</body>
+<script src="index.js"></script>
+</html>
