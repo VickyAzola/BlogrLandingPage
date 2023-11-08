@@ -173,6 +173,7 @@ a.closeBtn {
         color: var(--VeryDarkBlue);
         font-weight: 600;
         padding: 1rem;
+        margin: 1rem;
         text-decoration: none;
     }
     .topMenu.responsive .dropdown-content {
