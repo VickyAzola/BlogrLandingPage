@@ -182,13 +182,7 @@ a.closeBtn {
         color: var(--VeryDarkBlue);
         box-shadow: none;
     }
-    .topMenu.responsive .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    .topMenu.responsive .dropdown:focus .dropdown-content {
-        display: block;
-    }
-    .topMenu.responsive .dropdown:active .dropdown-content {
+    .topMenu.responsive .dropdown:hover, .dropdown:focus, .dropdown:active .dropdown-content {
         display: block;
     }
     .topMenu.responsive li {
