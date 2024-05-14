@@ -11,67 +11,100 @@
 <body>
   <header>
 
-    <div class="flex">
-      <a class="ml-4 mt-10 h-16 lg:ml-20 xl:ml-28 md:mt-14" href="#"><img class="w-20" src="../images/logo.svg" alt="Blogr Logo" /></a>
-
-      <div class="buttonGroup" id="buttonGroup">
-        <a class="menuBtn md:hidden absolute right-0 pb-6 pt-10 px-5" 
-        href="javascript:void(0);" onclick="showNavMenu()">
-          <img src="../images/icon-hamburger.svg" alt="Menu Icon" />
+    <div class="md:flex md:justify-around md:items-center">
+      <div class="flex">
+        <a class="ml-4 mt-10 h-16 md:ml-12 lg:ml-20 md:mt-12 w-20 " href="#">
+          <img class="md:w-full" src="../images/logo.svg" alt="Blogr Logo" />
         </a>
-        <a class="closeBtn md:hidden absolute right-0 pb-6 pt-10 px-5" 
-        href="javascript:void(0);" onclick="showNavMenu()">
-          <img src="../images/icon-close.svg" alt="Close Menu Icon" />
-        </a>
+        <div class="md:hidden" id="buttonGroup">
+          <a 
+            class="md:hidden absolute right-0 pb-6 pt-10 px-5" 
+            href="javascript:void(0);" 
+            onclick="showNavMenu()"
+          >
+            <img id="navButtonIcon" src="../images/icon-hamburger.svg" alt="Menu Icon" />
+          </a>
+        </div>
       </div>
-    </div>
-
-    <nav class="topMenu" id="topMenu" aria-label="navigation header">
-      <div class="flex flex-col md:flex-row">
-        <div class="dropdown">
-          <button class="dropdownBtn delayed">Product
-            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
-            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
-          </button>
-            <ul class="dropdown-content">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Marketplace</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Integrations</a></li>
+  
+      <nav 
+        class="hidden md:flex bg-white absolute mx-auto inset-x-0 w-[90%] rounded-md p-6 text-center flex flex-col items-center shadow-xl
+        md:flex-row md:bg-transparent md:shadow-none md:text-white md:p-0 md:static md:w-full md:justify-around md:items-center md:pt-4 md:ml-10 lg:ml-14" 
+        id="topMenu" 
+        aria-label="navigation header"
+      >
+        <div class="w-full md:flex md:gap-x-4">
+          <div class="dropdown flex flex-col items-center md:relative md:p-2">
+            <button 
+              class="dropdownBtn font-bold flex gap-x-2 items-center pb-4 md:pb-0 text-lg md:text-base md:font-medium md:hover:underline" 
+              tabIndex="1"
+            >
+              Product 
+              <svg class="arrowIcon stroke-[#FF7B86] md:stroke-white"
+                xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke-width="2" d="M1 1l4 4 4-4"/>
+              </svg>
+            </button>
+              <ul class="hidden md:absolute md:p-6 md:min-w-min md:text-left md:top-9 md:left-0 md:bg-white 
+              font-semibold bg-gray-100 rounded-md w-full p-4 space-y-4 text-gray-500">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+          </div>
+  
+          <div class="dropdown flex flex-col items-center md:relative md:p-2">
+            <button 
+              class="dropdownBtn font-bold flex gap-x-2 items-center py-4 md:p-0 text-lg md:text-base md:font-medium md:hover:underline" 
+              tabIndex="2"
+            >
+              Company
+              <svg class="arrowIcon stroke-[#FF7B86] md:stroke-white"
+                xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke-width="2" d="M1 1l4 4 4-4"/>
+              </svg>
+            </button>
+            <ul class="hidden md:absolute md:p-6 md:min-w-min md:text-left md:top-9 md:left-0 md:bg-white 
+            font-semibold bg-gray-100 rounded-md w-full p-4 space-y-4 text-gray-500">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
             </ul>
-        </div>
-        <div class="dropdown">
-          <button class="dropdownBtn delayed">Company
-            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
-            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
+          </div>
+  
+          <div class="dropdown flex flex-col items-center md:relative md:p-2">
+            <button 
+              class="dropdownBtn font-bold flex gap-x-2 items-center py-4 md:p-0 text-lg md:text-base md:font-medium md:hover:underline" 
+              tabIndex="3"
+            >
+              Connect
+              <svg class="arrowIcon stroke-[#FF7B86] md:stroke-white"
+                xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                <path fill="none" stroke-width="2" d="M1 1l4 4 4-4"/>
+              </svg>
+            </button>
+            <ul class="mb-6 md:mb-0 hidden md:absolute md:p-6 md:min-w-min md:text-left md:top-9 md:left-0 md:bg-white 
+            font-semibold bg-gray-100 rounded-md w-full p-4 space-y-4 text-gray-500">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div> 
+  
+        <div class="flex flex-col md:flex-row md:items-center border-t md:border-none w-full md:w-auto md:mr-12 lg:mr-20">
+          <button class="md:text-white text-[#1F3F5B] p-2 font-semibold my-3 md:my-2 md:mr-4">Login</button>
+          <button class="w-40 md:w-32 md:from-white md:to-white mx-auto md:text-[#FF525D] bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] text-white
+            font-bold md:bg-white hover:from-[#FF7A85] hover:to-[#FF7A85] py-3 px-10 md:py-2 md:px-8 rounded-full md:hover:text-white
+            transition-all">
+            Sign Up
           </button>
-          <ul class="dropdown-content">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-          </ul>
         </div>
-        <div class="dropdown">
-          <button class="dropdownBtn delayed">Connect
-            <img class="arrowIcon md:hidden" src="../images/icon-arrow-dark.svg" alt=""/>
-            <img class="arrowIcon hidden md:block" src="../images/icon-arrow-light.svg" alt=""/>
-          </button>
-          <ul class="dropdown-content">
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div> 
-
-      <div class="loginBtn lg:mr-28">
-        <hr class="w-[16rem] block md:hidden">
-        <button class="md:text-white text-[#1F3F5B] p-2 font-semibold my-3 md:my-2 md:mr-4">Login</button>
-        <button class="singUp md:text-[#FF525D] md:bg-white  hover:bg-[#FF7A85] md:hover:text-white py-3 px-10 md:py-2 md:px-8 rounded-full">Sign Up</button>
-      </div>
       </nav>
+    </div>
     
     <section class="text-white text-center grid place-content-center h-[29rem]">
       <h1 class="text-3xl md:text-5xl md:font-medium mb-4">A modern <br class="md:hidden">publishing platform</h1>
@@ -85,7 +118,7 @@
 
 <main class="pb-10 md:pb-0 text-center">
 
-  <section class="pb-52 md:pb-80 lg:pb-46 lg:bg-[url('../images/illustration-editor-desktop.svg')] lg:bg-contain lg:bg-no-repeat lg:bg-[center_right_-20rem] xl:bg-[center_right_-13rem]" style="background-size: 48rem;">
+  <section class="pb-64 md:pb-80 lg:pb-46 lg:bg-[url('../images/illustration-editor-desktop.svg')] lg:bg-contain lg:bg-no-repeat lg:bg-[center_right_-20rem] xl:bg-[center_right_-13rem]" style="background-size: 48rem;">
     <h2 class="text-2xl pt-20 md:pt-10 lg:pt-28 md:text-4xl font-medium text-[#1F3F5B]">Designed for the future</h2>
     <div class="lg:grid lg:grid-cols-2">
       <img class="lg:hidden my-10 mx-auto" src="../images/illustration-editor-mobile.svg" alt="">
@@ -103,10 +136,16 @@
     </div>
   </section>
 
-  <section class="mb-14 relative lg:grid lg:grid-cols-2 bg-[#373954] bg-[url('../images/bg-pattern-circles.svg')] bg-cover bg-no-repeat bg-[center_top_-14rem] lg:bg-[left_-25rem_top_-53rem] text-white text-center rounded-tr-[5rem] rounded-bl-[5rem] pt-[10rem] lg:pt-[8rem] pb-[7rem] lg:pb-[8rem]">
-    <img class="absolute left-0 right-0 mx-auto top-[-30%] md:top-[-63%] lg:top-[-18%] lg:left-[-50%]" src="../images/illustration-phones.svg" alt="">
-    <div class="lg:col-start-2 lg:text-left lg:mr-32">
-      <h2 class="mx-8 text-4xl font-medium mt-20 lg:mt-0">State of the Art Infrastructure</h2>
+  <section class="mb-14 relative flex bg-[#373954] bg-[url('../images/bg-pattern-circles.svg')] bg-cover bg-no-repeat bg-[center_top_-14rem] lg:bg-[left_-25rem_top_-53rem] text-white text-center rounded-tr-[5rem] rounded-bl-[5rem] pt-[10rem] lg:pt-[8rem] pb-[7rem] lg:pb-[8rem]">
+    <div class="lg:w-7/12 xl:lg:w-6/12">
+      <img 
+        class="absolute inset-x-0 mx-auto w-[30rem] top-[-16rem] md:w-[34rem] md:top-[-20rem] lg:w-[35rem] lg:top-[-4.5rem] lg:mx-0 lg:left-12" 
+        src="../images/illustration-phones.svg" 
+        alt=""
+      >
+    </div>
+    <div class="lg:w-5/12 xl:lg:w-6/12 lg:text-left md:mx-auto lg:pr-10 xl:pr-24">
+      <h2 class="mx-8 lg:mx-0 text-4xl font-medium mt-20 lg:mt-0">State of the Art Infrastructure</h2>
       <p class="mx-8 md:mx-16 lg:mx-0 mt-6 text-[#C8C8CB]"> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
         This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
       </p>
@@ -158,7 +197,7 @@
       </nav>
 
     <p class="text-xs text-[#b5b5b5] md:ml-6 pb-3">Challenge by <a class="font-bold hover:text-white" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a class="font-bold hover:text-white" href="https://github.com/VickyAzola/BlogrLandingPage" target="_blank">Victoria Azola</a>.</p>
+    Coded by <a class="font-bold hover:text-white" href="#" target="_blank">Victoria Azola</a>.</p>
   </footer>
 </body>
 <script src="index.js"></script>
